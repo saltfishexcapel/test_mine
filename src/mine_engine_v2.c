@@ -160,7 +160,7 @@ mine_click_r (Mine* m, mint* flaged)
 }
 
 void
-mine_set_gui_object_func (Mine* m, void* gui_object, void* gui_func)
+mine_set_gui_object_func (Mine* m, void* gui_object, void (*gui_func) (Mine*))
 {
         if (m == NULL)
                 return;
@@ -302,6 +302,7 @@ mine_map_put_mines (MineMap* map, mint clkx, mint clky)
         if (map == NULL)
                 return;
         dnum    = map->_x * map->_y;
+        /*随机大数：总格数除以雷数*/
         m_rands = dnum / map->m;
         srand ((muint)time (NULL));
         for (int y = 0; y < map->_y; ++y) {
@@ -312,7 +313,9 @@ mine_map_put_mines (MineMap* map, mint clkx, mint clky)
                         /*当无剩余雷数时退出布雷*/
                         if ((map->m) - mined == 0)
                                 return;
+                        /*对随机大数取余可得到生成雷的概率*/
                         will_mined = (!(rand () % m_rands) || always_mine);
+                        /*首次点击周围八个方格内不生成地雷*/
                         if ((x >= clkx - 1 && x <= clkx + 1) &&
                             (y >= clky - 1 && y <= clky + 1))
                                 will_mined = MFALSE;
