@@ -1,4 +1,7 @@
-/*Object 哈希键值表系统*/
+/**
+ * Object 哈希键值表系统
+ * 辅助扫雷按钮坐标存储
+ */
 #ifndef OBJECT_HASH_H
 #define OBJECT_HASH_H
 
