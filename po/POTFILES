@@ -1,0 +1,7 @@
+data/org.example.testmine.desktop.in
+data/org.example.testmine.appdata.xml.in
+data/org.example.testmine.gschema.xml
+src/test_mine-window.ui
+src/main.c
+src/test_mine-window.c
+

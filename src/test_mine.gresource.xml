@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gresources>
+  <gresource prefix="/org/example/testmine">
+    <file>test_mine-window.ui</file>
+    <file>gtk/help-overlay.ui</file>
+    <file>../data/picture/1mines.svg</file>
+    <file>../data/picture/2mines.svg</file>
+    <file>../data/picture/3mines.svg</file>
+    <file>../data/picture/4mines.svg</file>
+    <file>../data/picture/5mines.svg</file>
+    <file>../data/picture/6mines.svg</file>
+    <file>../data/picture/7mines.svg</file>
+    <file>../data/picture/8mines.svg</file>
+    <file>../data/picture/exploded.svg</file>
+    <file>../data/picture/flag.svg</file>
+    <file>../data/picture/opened.png</file>
+    <file>../data/picture/waitopen.png</file>
+  </gresource>
+</gresources>

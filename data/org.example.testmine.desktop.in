@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=test_mine
+Exec=test_mine
+Icon=org.example.testmine
+Terminal=false
+Type=Application
+Categories=GTK;
+StartupNotify=true
