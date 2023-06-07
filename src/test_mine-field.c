@@ -71,6 +71,7 @@ test_mine_suspend_clock (GtkWidget* widget G_GNUC_UNUSED,
 void
 test_mine_reset_clock ()
 {
+        is_stop = MTRUE;
         gtk_label_set_label (GTK_LABEL (clock_label), "计时: 0.00");
 }
 

@@ -107,7 +107,7 @@ test_mine_application_show_about (GSimpleAction* action G_GNUC_UNUSED,
                                "authors",
                                authors,
                                "version",
-                               "0.1.0",
+                               "0.2.0",
                                NULL);
 }
 

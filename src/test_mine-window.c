@@ -112,44 +112,6 @@ test_mine_window_class_init (TestMineWindowClass* klass)
         gtk_widget_class_bind_template_child (widget_class,
                                               TestMineWindow,
                                               time_label);
-
-        /*将 Label 绑定到时钟开启与时钟停止信号
-        g_signal_new ("clock_start",
-                      GTK_TYPE_LABEL,
-                      G_SIGNAL_ACTION,
-                      0,
-                      NULL,
-                      NULL,
-                      NULL,
-                      G_TYPE_NONE,
-                      0);
-        g_signal_new ("clock_end",
-                      GTK_TYPE_LABEL,
-                      G_SIGNAL_ACTION,
-                      0,
-                      NULL,
-                      NULL,
-                      NULL,
-                      G_TYPE_NONE,
-                      0);
-        g_signal_new ("clock_suspend",
-                      GTK_TYPE_LABEL,
-                      G_SIGNAL_ACTION,
-                      0,
-                      NULL,
-                      NULL,
-                      NULL,
-                      G_TYPE_NONE,
-                      0);
-        g_signal_new ("clock_reset",
-                      GTK_TYPE_LABEL,
-                      G_SIGNAL_ACTION,
-                      0,
-                      NULL,
-                      NULL,
-                      NULL,
-                      G_TYPE_NONE,
-                      0);*/
 }
 
 static void
@@ -267,7 +229,6 @@ test_mine_window_reset_game (GAction* action     G_GNUC_UNUSED,
 static void
 test_mine_window_init (TestMineWindow* self)
 {
-        //GObject* _clock_label;
         gtk_widget_init_template (GTK_WIDGET (self));
         CUSTOM_MACRO_A (changes, test_mine_window_change);
         CUSTOM_MACRO_A (low_game, test_mine_window_low_game);
@@ -275,27 +236,6 @@ test_mine_window_init (TestMineWindow* self)
         CUSTOM_MACRO_A (high_game, test_mine_window_high_game);
         CUSTOM_MACRO_A (custom_game, test_mine_window_custom_game);
         CUSTOM_MACRO_A (reset_game, test_mine_window_reset_game);
-
-        /*绑定计时 Label 实例到信号函数
-        _clock_label = gtk_widget_get_template_child (GTK_WIDGET (self),
-                                                     TEST_MINE_TYPE_WINDOW,
-                                                     "time_label");
-        g_signal_connect (_clock_label,
-                          "clock_start",
-                          G_CALLBACK (test_mine_start_clock),
-                          NULL);
-        g_signal_connect (_clock_label,
-                          "clock_start",
-                          G_CALLBACK (test_mine_end_clock),
-                          NULL);
-        g_signal_connect (_clock_label,
-                          "clock_start",
-                          G_CALLBACK (test_mine_suspend_clock),
-                          NULL);
-        g_signal_connect (_clock_label,
-                          "clock_reset",
-                          G_CALLBACK (test_mine_reset_clock),
-                          NULL);*/
 }
 
 #undef CUSTOM_MACRO_A
